@@ -32,11 +32,13 @@ RUN cd /home/konfirma;tar xvf wildfly-8.2.0.Final.tar
 ENV JAVA_HOME /usr/java/jdk1.7.0_67
 ENV JBOSS_HOME /home/konfirma/wildfly-8.2.0.Final
 
-RUN ln -s /Users/johnnybonilla/Downloads/wildfly-8.2.0.Final/modules $JBOSS_HOME/modules
+ADD deployments $JBOSS_HOME/standalone/deployments
 
-RUN ln -s /Users/johnnybonilla/Downloads/wildfly-8.2.0.Final/standalone $JBOSS_HOME/standalone
+#RUN ln -s /Users/johnnybonilla/Downloads/wildfly-8.2.0.Final/modules $JBOSS_HOME/modules
 
-EXPOSE 8080
-EXPOSE 8443
+#RUN ln -s /Users/johnnybonilla/Downloads/wildfly-8.2.0.Final/standalone $JBOSS_HOME/standalone
 
-ENTRYPOINT $JBOSS_HOME/bin/standalone.sh
+#EXPOSE 8080
+#EXPOSE 8443
+
+#ENTRYPOINT $JBOSS_HOME/bin/standalone.sh
