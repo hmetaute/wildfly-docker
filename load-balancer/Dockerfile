@@ -1,5 +1,5 @@
 # Base on the Fedora image created by me
-FROM goldmann/f20
+FROM fedora
 
 # Install Apache and mod_cluster
 RUN yum install -y httpd mod_cluster
