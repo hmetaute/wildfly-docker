@@ -1,0 +1,1 @@
+sudo docker run -it -p 8080:8080 -p 9990:9990 hmetaute/keycloak /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
